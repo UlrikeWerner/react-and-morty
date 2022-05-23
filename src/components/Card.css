@@ -1,0 +1,59 @@
+svg {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: -1em;
+  right: 1em;
+}
+
+path {
+  fill: var(--background-color);
+  stroke: var(--primary-color);
+  width: auto;
+}
+
+img {
+  width: 15em;
+  box-sizing: border-box;
+  border-radius: 3px 15px 5px 30px;
+  border: 3px solid var(--font-color);
+}
+
+button {
+  background: none;
+  color: var(--font-color);
+  font-size: 1.2rem;
+  align-items: center;
+  border: 2px solid var(--primary-color);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--primary-color);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 19rem;
+  position: relative;
+  border: 2px solid var(--primary-color);
+  margin: 1em;
+  padding: 1.5em 1em 1em;
+}
+
+.marked {
+  fill: var(--primary-color);
+}
+
+.cardImageWrapper {
+  position: relative;
+  align-self: center;
+}
+
+.name {
+  color: var(--font-color);
+  text-align: center;
+}
