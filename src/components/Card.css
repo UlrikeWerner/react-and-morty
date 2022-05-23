@@ -1,0 +1,30 @@
+svg {
+  width: 3em;
+  height: 3em;
+}
+
+path {
+  fill: black;
+  stroke: darkolivegreen;
+  width: auto;
+}
+
+img {
+  box-sizing: border-box;
+  border-radius: 3px 15px 5px 30px;
+  border: 3px solid white;
+}
+
+.card {
+  border: 2px solid darkolivegreen;
+  margin: 1em;
+}
+
+.marked {
+  fill: darkolivegreen;
+}
+
+.name {
+  color: white;
+  text-align: center;
+}
