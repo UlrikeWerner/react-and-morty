@@ -1,14 +1,8 @@
 import React from "react";
+import "./Header.css";
 
-/*function Header() {
-  return (
-    <header>
-      <h1>React and Morty</h1>
-    </header>
-  );
-}*/
 const Header = () => (
-  <header>
+  <header className="header">
     <h1>React and Morty</h1>
   </header>
 );
