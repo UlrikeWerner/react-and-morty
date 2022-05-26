@@ -1,0 +1,10 @@
+p {
+  color: var(--font-color);
+  font-size: 1.2rem;
+  margin: 0.2em;
+  text-align: center;
+}
+
+.card--hidden {
+  display: none;
+}

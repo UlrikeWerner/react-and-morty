@@ -20,18 +20,13 @@ img {
 }
 
 button {
-  background: none;
+  background-color: var(--primary-color);
   color: var(--font-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   align-items: center;
   border: 2px solid var(--primary-color);
   border-radius: 1em;
   cursor: pointer;
-}
-
-button:hover,
-button:focus {
-  background-color: var(--primary-color);
 }
 
 .card {
