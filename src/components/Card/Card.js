@@ -1,7 +1,9 @@
 import React from "react";
+import CardMoreInfo from "./CardMoreInfo/CardMoreInfo";
 import "./Card.css";
 
 export default function Card({
+  id,
   isBookmarked,
   src,
   name,
@@ -11,7 +13,7 @@ export default function Card({
   status,
 }) {
   return (
-    <section className="card">
+    <section className="card" key={id}>
       <div className="cardImageWrapper">
         <svg viewBox="0 0 24 24">
           <path
@@ -23,6 +25,13 @@ export default function Card({
       </div>
       <h2 className="name">{name}</h2>
       <button type="button">Show details</button>
+      <CardMoreInfo
+        id={id}
+        gender={gender}
+        location={location}
+        species={species}
+        status={status}
+      />
     </section>
   );
 }
