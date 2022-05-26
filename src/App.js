@@ -8,14 +8,30 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const [persons, setPersons] = useState([]);
 
+  function toggleIsBookmarked(id) {
+    setPersons(
+      persons.map((person) => {
+        if (person.id === id) {
+          person.isBookmarked = !person.isBookmarked;
+        }
+        return person;
+      })
+    );
+  }
+
   useEffect(() => {
     const url = "https://rickandmortyapi.com/api/character/";
 
     async function fetchData(url) {
       const response = await fetch(url);
       const data = await response.json();
-      setPersons(data.results);
-      console.log(data.results);
+      setPersons(
+        data.results.map((element) => {
+          const randomBoolean = Math.random() < 0.5;
+          element["isBookmarked"] = randomBoolean;
+          return element;
+        })
+      );
     }
     fetchData(url);
   }, []);
@@ -23,7 +39,7 @@ function App() {
   return (
     <>
       <Header />
-      <Home persons={persons} setPersons={setPersons} />
+      <Home persons={persons} toggleIsBookmarked={toggleIsBookmarked} />
       <Footer />
     </>
   );

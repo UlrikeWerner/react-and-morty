@@ -12,6 +12,11 @@ path {
   width: auto;
 }
 
+.marked {
+  fill: var(--primary-color);
+  stroke: var(--font-color);
+}
+
 img {
   width: 15em;
   box-sizing: border-box;
@@ -29,6 +34,11 @@ button {
   cursor: pointer;
 }
 
+button:is(:hover, :focus) {
+  border: 2px solid var(--font-color);
+  outline: none;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -37,10 +47,6 @@ button {
   border: 2px solid var(--primary-color);
   margin: 1em;
   padding: 1.5em 1em 1em;
-}
-
-.marked {
-  fill: var(--primary-color);
 }
 
 .cardImageWrapper {
