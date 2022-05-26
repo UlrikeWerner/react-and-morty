@@ -10,7 +10,7 @@ export default function Home({ persons }) {
           <Card
             key={person.id}
             id={person.id}
-            isBookmarked={false}
+            isBookmarked={person.isBookmarked}
             src={person.image}
             name={person.name}
             gender={person.gender}

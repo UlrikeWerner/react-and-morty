@@ -14,7 +14,13 @@ function App() {
     async function fetchData(url) {
       const response = await fetch(url);
       const data = await response.json();
-      setPersons(data.results);
+      setPersons(
+        data.results.map((element) => {
+          const randomBoolean = Math.random() < 0.5;
+          element["isBookmarked"] = randomBoolean;
+          return element;
+        })
+      );
       console.log(data.results);
     }
     fetchData(url);
