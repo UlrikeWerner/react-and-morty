@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Card/Card";
 import "./Home.css";
 
-export default function Home({ persons, setPersons }) {
+export default function Home({ persons }) {
   return (
     <main className="home">
       {persons.map((person) => {

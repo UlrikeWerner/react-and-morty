@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CardMoreInfo from "./CardMoreInfo/CardMoreInfo";
 import "./Card.css";
 
@@ -12,6 +12,7 @@ export default function Card({
   species,
   status,
 }) {
+  const [showMore, setShowMore] = useState("false");
   return (
     <section className="card" key={id}>
       <div className="cardImageWrapper">
@@ -24,9 +25,17 @@ export default function Card({
         <img src={src} alt={name} />
       </div>
       <h2 className="name">{name}</h2>
-      <button type="button">Show details</button>
+      <button
+        type="button"
+        onClick={() => {
+          setShowMore(!showMore);
+        }}
+      >
+        {showMore ? "Show details" : "Show less"}
+      </button>
       <CardMoreInfo
-        id={id}
+        showMore={showMore}
+        key={id}
         gender={gender}
         location={location}
         species={species}
