@@ -1,14 +1,8 @@
 import "./CardMoreInfo.css";
 
-export default function CardMoreInfo({
-  showMore,
-  gender,
-  location,
-  species,
-  status,
-}) {
+export default function CardMoreInfo({ gender, location, species, status }) {
   return (
-    <section className={showMore ? "card--hidden" : ""}>
+    <section>
       <p>gender: {gender}</p>
       <p>location: {location}</p>
       <p>species: {species}</p>

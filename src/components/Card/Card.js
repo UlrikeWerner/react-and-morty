@@ -43,7 +43,6 @@ export default function Card({
         ""
       ) : (
         <CardMoreInfo
-          showMore={showMore}
           key={id}
           gender={gender}
           location={location}
