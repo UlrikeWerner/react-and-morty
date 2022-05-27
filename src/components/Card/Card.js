@@ -39,14 +39,18 @@ export default function Card({
       >
         {showMore ? "Show details" : "Show less"}
       </button>
-      <CardMoreInfo
-        showMore={showMore}
-        key={id}
-        gender={gender}
-        location={location}
-        species={species}
-        status={status}
-      />
+      {showMore ? (
+        ""
+      ) : (
+        <CardMoreInfo
+          showMore={showMore}
+          key={id}
+          gender={gender}
+          location={location}
+          species={species}
+          status={status}
+        />
+      )}
     </section>
   );
 }
