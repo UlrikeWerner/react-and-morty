@@ -27,9 +27,7 @@ function App() {
       const data = await response.json();
       setPersons(
         data.results.map((element) => {
-          const randomBoolean = Math.random() < 0.5;
-          element["isBookmarked"] = randomBoolean;
-          return element;
+          return { ...element, isBookmarked: Math.random() < 0.5 };
         })
       );
     }
